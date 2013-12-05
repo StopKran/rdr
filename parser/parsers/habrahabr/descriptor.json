@@ -1,0 +1,9 @@
+{
+    "name": "habrahabr",
+    "file_name": "parser",
+    "path": "habrahabr",
+    "class_name": "parser",
+    "content_url_pattern": "habrahabr.ru/post/",
+    "description" : "habrahabr pages parser",
+    "version": "1.1"
+}

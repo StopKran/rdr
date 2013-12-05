@@ -1,0 +1,5 @@
+
+
+libraries:
+Beautiful Soup 3
+sudo apt-get install python-beautifulsoup
