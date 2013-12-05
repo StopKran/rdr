@@ -2,7 +2,7 @@ import hashlib
 from pymongo import Connection
 from config import config
 import page_downloader
-from parsers.habrahabr.parser import parser
+#from parsers.habrahabr.parser import parser
 
 __author__ = 'stopkran'
 
@@ -18,7 +18,7 @@ def execute(parser_name):
     parser_json = get_parser_json(parser_name, db)
     import_string = "from parsers." + parser_json["path"] + "." + parser_json["file_name"] + " import " + parser_json["class_name"]
     exec import_string
-    digest_page = page_downloader.download_page("http://habrahabr.ru")
+    digest_page = page_downloader.download_page("http://" + parser_json["digest_page"])
     posts = parser.parse_digest_page(digest_page)
 
 
